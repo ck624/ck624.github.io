@@ -63,7 +63,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     import { QueryArgs } from '../js/util/query-args.js';
 
     const CYLD_TEXTURE_MONO_PATH = '../media/textures/rect-mono.png';
-    const CYLD_TEXTURE_STEREO_PATH = '../media/textures/rect-stereo-top-down.png';
+    // const CYLD_TEXTURE_STEREO_PATH = '../media/textures/rect-stereo-top-down.png';
+    const CYLD_TEXTURE_STEREO_PATH = '../media/textures/output.jpg';
 
     // If requested, use the polyfill to provide support for mobile devices
     // and devices which only support WebVR.
@@ -173,9 +174,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             viewPixelHeight: viewPixelHeight,
             layout: cyldIsStereo ? "stereo-top-bottom" : "mono",
           });
-          cyldLayer.centralAngle = 60 * Math.PI / 180;
+          cyldLayer.centralAngle = 80 * Math.PI / 180;
           cyldLayer.aspectRatio = viewPixelWidth / viewPixelHeight;
-          cyldLayer.radius = 2;
+          cyldLayer.radius = 4;
 
           session.updateRenderState({ layers: [cyldLayer, projLayer] });
         }
